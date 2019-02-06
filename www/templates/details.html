@@ -1,0 +1,47 @@
+<ion-view title="Add A New Goal">
+
+  <ion-nav-buttons side="left">
+   <!-- Toggle left side menu -->
+   <button ng-click="toggleLeft()" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+
+
+
+<ion-side-menus enable-menu-with-back-views="true">
+
+  <ion-side-menu-content>
+     <div class="details card">
+    <h3 class="sect-head">Goal Details</h3>
+		<label class="item item-input item-floating-label">
+      <span class="input-label">Goal: </span>
+      <input type="text" ng-model="goal.name" placeholder="{{ goal.name || 'Goal Name'}}" / >
+		</label>
+    
+		<label class="item item-input item-floating-label">
+      <span class="input-label">Description: </span>
+      <input type="text" ng-model="goal.description" placeholder="{{ goal.description || 'Goal Description'}}"  / >
+    </label> 
+    
+		<label class="item item-input item-floating-label">
+      <span class="input-label">Rewards: </span>
+      <input type="text" ng-model="goal.rewards" placeholder="{{ goal.reward || 'Goal Reward'}}"  / >
+    </label>
+    
+		<label class="item item-input item-floating-label">
+      <span class="input-label">Consequences: </span>
+      <input type="text" ng-model="goal.consequences" placeholder="{{goal.consequences || 'Goal Consequesnces'}}"  / >
+    </label>
+    
+		<label class="item item-input item-floating-label">
+      <span class="input-label">Target Date: </span>
+      <input type="date" ng-model="goal.target" placeholder="{{goal.target || 'Target Date'}}"/> 
+    </label>
+     
+  </div> <!-- end details -->
+  
+<button class="button button-full button-royal" ng-click="saveDetails(goal)"><i class="icon ion-android-upload icon-positive" ></i> Save</button> <button class="button button-full button-assertive" ng-click="clearLS()"> Clear LS </button> 
+  
+  </ion-side-menu-content>
+</ion-side-menus>
+</ion-view>

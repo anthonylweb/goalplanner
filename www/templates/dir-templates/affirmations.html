@@ -1,0 +1,20 @@
+	<ion-content>
+		<div class="affirmations card">
+			<h3 class="sect-head">Affirmations for {{goal.name}}</h3>
+            
+            <div class="form-group" ng-repeat="affirmation in affirmations">
+                <label for="affirmation" class="item item-input item-floating-label" ng-show="showAffLabel(goal)">
+                <span class="input-label">Affirmation: </span>
+                <input type="text" ng-model="goal.affirmation" placeholder="{{goal.affirmation || 'Affirmations: To keep me motivated...'}}" class="affirmation" />
+                </label> 
+                    
+                <button class="button button-full button-balanced" ng-show="showAddAff(affirmation)"ng-click="addAffirmation()"><i class="icon ion-plus-round icon-positive"></i> Add New Affirmation
+         	</button>
+            </div>
+            
+			
+          		
+		</div> <!-- end affirmations -->
+		
+		<button class="button button-full button-royal" ng-click="saveAffirmations(goal.affirmation)"><i class="icon ion-android-upload icon-positive" ></i> Save</button> <button class="button button-full button-assertive" ng-click="clearLS()"> Clear LS </button>
+	</ion-content>

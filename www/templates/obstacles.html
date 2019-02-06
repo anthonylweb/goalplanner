@@ -1,0 +1,30 @@
+
+ <ion-nav-view animation="slide-left-right">
+	 <ion-content>
+<div class="obstacles card">
+
+			<h3 class="sect-head">Obstacles</h3>
+			<button class="button button-full button-energized" ng-click="addNew('obstacle')">
+				<i class="icon ion-plus-round icon-positive" ></i> Add New Obstacle
+			</button>
+
+
+
+			<div class="obstacle">
+				
+					<label class="item item-input item-floating-label">
+						<span class="input-label">Obstacle: </span>
+						<input type="text" ng-model="goal.obstacle" placeholder="{{goal.obstacle || 'Obstacles to my goal...'}}" / >
+					</label>
+					
+					<a href="#/add-goal/obstacles/solutions"><button class="button button-full button-positive">
+						<i class="icon ion-plus-round icon-positive" ></i>New Solution
+					</button></a>
+				
+			</div>
+		
+		</div> 
+		
+		<save-button></save-button>
+		
+</ion-nav-view>

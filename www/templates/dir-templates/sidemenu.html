@@ -1,0 +1,28 @@
+<div ng-if="goal == true">
+	<a href="#/add-goal/details/{{goal.id}}" ng-click="sideMenuClick()">
+		<button class="button button-full">Details</button>
+	</a>
+	
+	<a href="#/add-goal/affirmations/{{goal.id}}" ng-click="sideMenuClick()">
+		<button class="button button-full">Affirmations</button>
+	</a>
+	
+	<a href="#/add-goal/obstacles/{{goal.id}}" ng-click="sideMenuClick()" >
+		<button class="button button-full">Goal Obstacles</button>
+	</a>
+</div>
+
+<div ng-if="goal !== true">
+	<a href="#/add-goal/details" ng-click="sideMenuClick()">
+		<button class="button button-full">Details</button>
+	</a>
+	
+	<a href="#/add-goal/affirmations" ng-click="sideMenuClick()">
+		<button class="button button-full">Affirmations</button>
+	</a>
+	
+	<a href="#/add-goal/obstacles" ng-click="sideMenuClick()" >
+		<button class="button button-full">Goal Obstacles</button>
+	</a>
+</div>
+	

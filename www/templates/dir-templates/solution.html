@@ -1,0 +1,31 @@
+<section class="solutions card">
+	<h3 class="sect-head">
+		<i class="fa fa-cog green"></i> 
+		Obstacle Solution
+	</h3>
+	<label class="item item-input item-floating-label">
+		<span class="input-label">Obstacle Solution: </span>
+		<input type="text" ng-model="goal.solution" placeholder="To solve this obstacle, I can..."  / >
+	</label>
+	<label class="item item-input item-floating-label">
+		<span style="display: inline-block; vertical-align: top;">Solution To: </span>
+        
+		<select style="display: inline-block; vertical-align: top;" name="solutionForObstacle" ng-model="goal.assocGoal">
+			<option ng-repeat="obstacle in goal" value="{{obstacle}}">{{obstacle}}</option>
+		</select>
+	</label>
+	
+	<div id="gp_actions">
+		<h3 class="sect-head">
+			<i class="fa fa-bolt yellow"></i> 
+			Obstacle's  Action Steps
+		</h3>
+		<section class="action">
+			<a href="#/add-goal/obstacles/solutions/action-steps">
+				<button class="button button-full button-dark">
+					<i class="icon ion-plus-round icon-positive" ></i> Add New Action Step
+				</button>
+			</a>
+		</section>
+	</div>
+</section>
